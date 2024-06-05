@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <head><meta charset="utf-8">
-        <meta name="viewport" content="width=device-width">
+    <head>
         <title>HTML Form</title>
         <style>
             body {
@@ -10,16 +9,17 @@
                 align-items: center;
                 height: 100vh;
                 margin: 0;
-                background-color: #f0f0f0;
+                background-color: #d1b38e; /* Fondo color arena */
+                font-family: 'Arial', sans-serif; /* Tipo de letra */
             }
 
             form {
-                width: 800px;
+                width: 400px;
                 background-color: #fff;
                 padding: 20px;
                 border-radius: 8px;
-                box-shadow: 0 0 10px
-                    rgba(0, 0, 0, 0.1);
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                border: 1px solid #000; /* Borde negro */
             }
 
             fieldset {
@@ -31,11 +31,14 @@
             legend {
                 font-weight: bold;
                 margin-bottom: 10px;
+                font-size: 18px; /* Tamaño del texto */
+                color: #000; /* Color del texto */
             }
 
             label {
                 display: block;
                 margin-bottom: 5px;
+                color: #000; /* Color del texto */
             }
 
             input[type="text"],
@@ -57,38 +60,55 @@
 
             input[type="submit"] {
                 padding: 10px 20px;
-
+                background-color: #000; /* Fondo negro */
+                color: #fff; /* Texto blanco */
+                border: none;
                 border-radius: 5px;
                 cursor: pointer;
+                text-decoration: none; /* Sin subrayado */
+            }
+
+            input[type="submit"]:hover {
+                background-color: #444; /* Cambio de color al pasar el mouse */
+            }
+
+            a {
+                color: #000; /* Color del enlace */
+                text-decoration: none;
+            }
+
+            a:hover {
+                text-decoration: underline; /* Subrayado al pasar el mouse */
             }
         </style>
     </head>
     <body>
-        <form>
+        <form action="fanidqr.html" method="post">
             <fieldset>
                 <legend>
-                    Validación FanID
+                    Creación FanID
                 </legend>
-                <H1> Confirme sus datos personales</H1>
         
-                <label
-                    >Ingrese su código de boleto</label
-                >
+                <label>Ingrese su nombre completo</label>
                 <input type="text" name="name" /><br><br>
-                <label>Ingrese los 4 dígitos de la tarjeta de pago</label>
-                <input type="text" correo="name" />
-                <br><br>
-                <label>Ingrese el nombre de títular</label>
                 
-                <input type="text" correo="name" />
+                <label>Ingrese su correo electrónico</label>
+                <input type="text" name="email" /><br><br>
+                
+                <label>Ingrese su género</label>
+                <input type="radio" name="gender" value="male" />Masculino
+                <input type="radio" name="gender" value="female" />Femenino
+                <input type="radio" name="gender" value="others" />Otro
                 <br><br>
-                   
-        <a href="QR.html">Generar</a>
+                
+                <label>Ingrese su edad</label>
+                <input type="date" name="dob" /><br><br>
+                
+                <label>Ingrese los último 4 dígitos de la tarjeta de crédito con que se realizó el pago:</label>
+                <textarea name="address"></textarea><br><br>
+                
+                <input type="submit" value="Mandar" />
             </fieldset>
-            <button class="login-button">
-                <a class="login-button" href="Boleto2.html">Obtener mis boletos</a> 
-            </button>
         </form>
-       
     </body>
 </html>
